@@ -43,7 +43,7 @@ client = OpenAI(
     base_url=os.getenv("BASE_URL")
 )
 
-# 📥 Extract text from various formats
+# 📅 Extract text from various formats
 def extract_text(file):
     ext = file.name.split('.')[-1].lower()
     try:
@@ -93,7 +93,7 @@ if uploaded_files:
         new_docs = splitter.create_documents([full_text])
         st.session_state.docs.extend(new_docs)
 
-        embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+        embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
         st.session_state.vectorstore = FAISS.from_documents(st.session_state.docs, embeddings)
 
         st.session_state.embedding_ready = True
@@ -134,4 +134,4 @@ if st.session_state.embedding_ready and st.session_state.vectorstore:
 elif uploaded_files and not st.session_state.embedding_ready:
     st.info("⏳ Processing uploaded files... Please wait.")
 else:
-    st.warning("📎 Upload at least one supported file (.txt, .pdf, .docx) to start chatting.")
+    st.warning("📌 Upload at least one supported file (.txt, .pdf, .docx) to start chatting.")
