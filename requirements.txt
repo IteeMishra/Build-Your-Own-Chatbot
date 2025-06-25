@@ -1,18 +1,11 @@
-# Streamlit UI
 streamlit==1.33.0
-
-# File reading
 pdfplumber==0.10.3
 python-docx==1.1.0
 chardet==5.2.0
 python-dotenv==1.0.1
 
-# LangChain core
 langchain==0.1.16
-
-# Embedding + Vector Search
 transformers==4.41.2
 faiss-cpu==1.7.4
 
-# OpenAI-compatible client
 openai==1.30.1
