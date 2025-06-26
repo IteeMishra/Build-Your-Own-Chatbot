@@ -19,9 +19,4 @@ This is a fully customizable chatbot powered by Gemini (Google's LLM) and LangCh
 - `python-dotenv` – Load API keys securely from `.env`
 - `pdfplumber` and `python-docx` – File parsing
 
-## ⚙️ Setup Instructions
 
-1. **Clone this repository:**
-   ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
